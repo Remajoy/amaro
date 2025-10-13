@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Organizational Structure - Jaro Heritage Tourism</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f8f5f0;
+      color: #3a2e26;
+      background-image: url('images/paper-texture.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+    }
+
+    header {
+      background-color: #5a3825;
+      color: #fefcf6;
+      padding: 1rem 2rem;
+      border-bottom: 4px solid #d7b77e;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    nav a {
+      color: #f0e6d2;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #d7b77e;
+    }
+
+    section {
+      border-radius: 12px;
+      max-width: 1100px;
+      margin: 3rem auto;
+      padding: 3rem 1.5rem;
+      background-color: rgba(255,255,255,0.95);
+      border: 2px solid #d7b77e;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    }
+
+    section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: #5a3825;
+      border-bottom: 2px solid #d7b77e;
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+    }
+
+    .organizer-card {
+      background-color: #fdf8f3;
+      border: 2px solid #d7b77e;
+      border-radius: 16px;
+      padding: 1.5rem;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .organizer-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    .organizer-card img {
+      border-radius: 50%;
+      border: 3px solid #d7b77e;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    footer {
+      background-color: #5a3825;
+      color: #f0e6d2;
+      text-align: center;
+      padding: 1.5rem;
+      border-top: 4px solid #d7b77e;
+      font-size: 0.95rem;
+    }
+
+    footer p.text-sm {
+      color: #d7b77e;
+    }
+  </style>
+</head>
+<body>
+  <header class="flex flex-col sm:flex-row justify-between items-center rounded-md">
+    <div class="logo">
+      <h1>Jaro Heritage Tourism - Organizational Structure</h1>
+    </div>
+    <nav class="mt-3 sm:mt-0">
+      <ul class="flex space-x-6 text-lg">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#organizers">Organizers</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="intro" class="text-center">
+    <h2>Organizational Structure</h2>
+    <p class="max-w-3xl mx-auto text-lg leading-relaxed">
+      The cultural and historic value of Jaro's landmarks is maintained by the Jaro Heritage Tourism Organization, ensuring that every project keeps the city's religious, architectural, and traditional heritage intact.
+    </p>
+  </section>
+
+  <section id="organizers" class="text-center">
+    <h2>Organizers</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-10">
+
+      <div class="organizer-card">
+        <img src="rema.jpg" alt="Organizer 1" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold text-[#5a3825]">Rema Joy Amaro</h3>
+        <p class="text-gray-600">Project Developer</p>
+      </div>
+
+      <div class="organizer-card">
+        <img src="kat.jpg" alt="Organizer 2" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold text-[#5a3825]">Katrina D. Dumayhag</h3>
+        <p class="text-gray-600">Content Designer</p>
+      </div>
+
+      <div class="organizer-card">
+        <img src="Jasmine.jpg" alt="Organizer 3" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold text-[#5a3825]">Jasmine Arcenal</h3>
+        <p class="text-gray-600">Video Editor</p>
+      </div>
+
+    </div>
+  </section>
+
+ 
+  <section id="contact" class="text-center">
+    <h2>Contact Us</h2>
+    <p class="max-w-2xl mx-auto text-lg mb-8">
+      Have questions or want to learn more about Jaro’s heritage? Get in touch with us through the details below.
+    </p>
+
+
+    <div class="max-w-lg mx-auto text-left">
+      <form class="space-y-4">
+        <input type="text" placeholder="Your Name" class="w-full p-3 border border-[#d7b77e] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d7b77e]">
+        <input type="email" placeholder="Your Email" class="w-full p-3 border border-[#d7b77e] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d7b77e]">
+        <textarea placeholder="Your Message" rows="4" class="w-full p-3 border border-[#d7b77e] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d7b77e]"></textarea>
+        <button type="submit" class="bg-[#5a3825] text-white px-6 py-2 rounded-lg hover:bg-[#7a5135] transition">
+          Send Message
+        </button>
+      </form>
+    </div>
+	<br>
+	<br>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+      <div>
+        <i class="fas fa-map-marker-alt text-[#5a3825] text-3xl mb-3"></i>
+        <h3 class="text-xl font-semibold text-[#5a3825] mb-1">Address</h3>
+        <p>Jaro Plaza, Iloilo City, Philippines</p>
+      </div>
+      <div>
+        <i class="fas fa-envelope text-[#5a3825] text-3xl mb-3"></i>
+        <h3 class="text-xl font-semibold text-[#5a3825] mb-1">Email</h3>
+        <p>remajoyamaro@gmail.com</p>
+      </div>
+      <div>
+        <i class="fas fa-phone text-[#5a3825] text-3xl mb-3"></i>
+        <h3 class="text-xl font-semibold text-[#5a3825] mb-1">Phone</h3>
+        <p>+63 915 383 3156</p> 
+      </div>
+    </div>
+
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Jaro Heritage Tourism. All rights reserved.</p>
+    <p class="text-sm">Developed by: Rema Joy Amaro, Jasmine Arcenal, Katrina Dumayhag</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>

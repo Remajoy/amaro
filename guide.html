@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jaro Heritage Guide - Belfry & Cathedral</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f8f5f0;
+      color: #3a2e26;
+      background-image: url('images/paper-texture.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+    }
+
+    header {
+      background-color: #5a3825;
+      color: #fff;
+      padding: 1rem 2rem;
+      border-bottom: 4px solid #d7b77e;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+
+    header h1 {
+      font-family: 'Merriweather', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    nav ul li a {
+      color: #f0e6d2;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #d7b77e;
+    }
+
+    section#tourist-spots {
+      background-color: rgba(255, 255, 255, 0.95);
+      border: 2px solid #d7b77e;
+      border-radius: 10px;
+      padding: 4rem 2rem;
+      margin: 3rem auto;
+      max-width: 1100px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
+
+    section h2 {
+      font-family: 'Merriweather', serif;
+      font-size: 2.5rem;
+      color: #5a3825;
+      border-bottom: 2px solid #d7b77e;
+      display: inline-block;
+      padding-bottom: 0.5rem;
+      margin-bottom: 2rem;
+    }
+
+    section p {
+      font-size: 1.125rem;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+
+    .card {
+      background-color: #fff;
+      border-left: 5px solid #d7b77e;
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+    }
+
+    .card h3 {
+      font-family: 'Merriweather', serif;
+      color: #5a3825;
+    }
+
+    footer {
+      background-color: #5a3825;
+      color: #f0e6d2;
+      text-align: center;
+      padding: 1.5rem;
+      border-top: 4px solid #d7b77e;
+      margin-top: 4rem;
+    }
+
+    footer p.text-sm {
+      color: #d7b77e;
+    }
+
+    /* Gallery */
+    .gallery img {
+      border-radius: 10px;
+      border: 3px solid #d7b77e;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+      transition: transform 0.4s ease;
+      cursor: pointer;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Lightbox */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 50;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="flex flex-col sm:flex-row justify-between items-center">
+    <div class="logo">
+      <h1>Jaro Heritage Guide</h1>
+    </div>
+    <nav class="mt-3 sm:mt-0">
+      <ul class="flex space-x-6 text-lg">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cathedral.html">Cathedral</a></li>
+        <li><a href="belfry.html">Belfry</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="tourist-spots">
+    <div class="text-center">
+      <h2>Jaro Belfry & Cathedral</h2>
+      <p>In the heart of Jaro, Iloilo City, stand two of the most treasured landmarks of Western Visayas — the <strong>Jaro Cathedral</strong> and the <strong>Jaro Belfry</strong>. These magnificent structures embody centuries of devotion, culture, and Spanish colonial architecture that shaped the city's identity.</p>
+    </div>
+
+    <div class="gallery max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6 mt-8 px-4">
+      <div><img src="cathedral.jpg" alt="Jaro Cathedral"></div>
+      <div><img src="belfry.jpg" alt="Jaro Belfry"></div>
+      <div><img src="kampanaryo.jpg" alt="Kampanaryo Belfry View"></div>
+      <div><img src="nuestra.jpg" alt="Nuestra Señora de la Candelaria"></div>
+	  <div><img src="jaro plaza.jpg" alt="Jaro Plaza"></div>
+    </div>
+
+    <p class="mt-8 text-center">The Jaro Cathedral, also known as the National Shrine of Our Lady of the Candles, was built in 1864 and is one of the few churches in the Philippines where the bell tower stands separately across the street — the iconic Jaro Belfry. Both serve as lasting reminders of Iloilo’s faith and resilience through time.</p>
+
+    <div class="grid-cards mt-10">
+      <div class="card">
+        <h3 class="text-xl font-semibold mb-2">1. Jaro Cathedral</h3>
+        <p>Marvel at its Romanesque Revival design, elegant facade, and the venerated image of Nuestra Señora de la Candelaria, the patroness of Western Visayas.</p>
+      </div>
+      <div class="card">
+        <h3 class="text-xl font-semibold mb-2">2. Jaro Belfry</h3>
+        <p>This 18th-century belfry once served as a watchtower against invaders and now stands as a silent witness to Jaro’s vibrant past.</p>
+      </div>
+      <div class="card">
+        <h3 class="text-xl font-semibold mb-2">3. Jaro Plaza</h3>
+        <p>Surrounding the landmarks is the charming Jaro Plaza — a peaceful spot where heritage meets the local rhythm of life.</p>
+      </div>
+      <div class="card">
+        <h3 class="text-xl font-semibold mb-2">4. Cultural Heritage</h3>
+        <p>Every February, the Jaro Fiesta comes alive, honoring the Lady of the Candles with grand processions and heartfelt devotion.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Jaro Heritage Tourism. All rights reserved.</p>
+    <p class="text-sm">Developed by: Rema Joy Amaro, Jasmine Arcenal, Katrina Dumayhag</p>
+  </footer>
+
+  <script>
+    const galleryImages = document.querySelectorAll('.gallery img');
+    galleryImages.forEach(img => {
+      img.addEventListener('click', () => {
+        const lightbox = document.createElement('div');
+        lightbox.classList.add('lightbox');
+        lightbox.innerHTML = `
+          <img src="${img.src}" alt="${img.alt}" class="max-h-[90%] max-w-[90%] rounded-lg border-4 border-[#d7b77e] shadow-2xl">
+        `;
+        document.body.appendChild(lightbox);
+        lightbox.addEventListener('click', () => lightbox.remove());
+      });
+    });
+  </script>
+</body>
+</html>

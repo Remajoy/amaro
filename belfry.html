@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jaro Belfry - Jaro Heritage Tourism</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" />
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f8f5f0;
+      color: #3a2e26;
+      background-image: url('../midterm project/images/paper-texture.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+    }
+
+    header {
+      background-color: #5a3825;
+      color: #fff;
+      padding: 1rem 2rem;
+      border-bottom: 4px solid #d7b77e;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+
+    header h1 {
+      font-family: 'Merriweather', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+    }
+
+    nav ul li a {
+      color: #f0e6d2;
+      transition: color 0.3s ease;
+      font-weight: 500;
+    }
+
+    nav ul li a:hover {
+      color: #d7b77e;
+    }
+
+    section {
+      border-radius: 10px;
+      max-width: 1100px;
+      margin: 3rem auto;
+      padding: 3rem 1.5rem;
+      background-color: rgba(255,255,255,0.95);
+      border: 2px solid #d7b77e;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
+
+    section h2 {
+      font-family: 'Merriweather', serif;
+      font-size: 2rem;
+      color: #5a3825;
+      border-bottom: 2px solid #d7b77e;
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+    }
+
+    .btn-heritage {
+      background-color: #5a3825;
+      color: #fff;
+      padding: 0.8rem 2rem;
+      border-radius: 9999px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .btn-heritage:hover {
+      background-color: #7b573b;
+    }
+
+    .table-heritage th {
+      background-color: #5a3825;
+      color: #fff;
+    }
+
+    footer {
+      background-color: #5a3825;
+      color: #f0e6d2;
+      text-align: center;
+      padding: 1.5rem;
+      border-top: 4px solid #d7b77e;
+    }
+
+    footer p.text-sm {
+      color: #d7b77e;
+    }
+
+    img {
+      border-radius: 10px;
+      border: 3px solid #d7b77e;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    }
+
+    /* Gallery hover effect */
+    .gallery-item img {
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    /* Lightbox */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.85);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 50;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="flex flex-col sm:flex-row justify-between items-center">
+    <div class="logo">
+      <h1>Jaro Belfry</h1>
+    </div>
+    <nav class="mt-3 sm:mt-0">
+      <ul class="flex space-x-6 text-lg">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#history">History</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#schedule">Visiting Hours</a></li>
+        <li><a href="#location">Location</a></li>
+        <li><a href="guide.html">Tourism Guide</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="text-center">
+    <h2>Welcome to Jaro Belfry</h2>
+    <img src="belfry.jpg" alt="Jaro Belfry" class="w-72 h-72 mx-auto object-cover my-6">
+    <p class="text-lg max-w-2xl mx-auto">
+      A historic bell tower and one of the most iconic landmarks of Jaro, Iloilo City. Standing tall across the Jaro Cathedral, the Belfry is a proud reminder of Iloilo’s deep-rooted faith and colonial past.
+    </p>
+    <a href="#about" class="btn-heritage mt-6 inline-block">Learn More</a>
+  </section>
+
+  <section id="about" class="text-center">
+    <h2>About the Jaro Belfry</h2>
+    <p class="max-w-3xl mx-auto text-lg leading-relaxed mb-6">
+      The Jaro Belfry, also known as the “Campanario de Jaro,” was built in 1744 and stands as a symbol of faith and resilience. Once serving as a watchtower against pirate invasions, it now remains one of Iloilo’s most visited heritage sites.
+    </p>
+    <div class="mx-auto max-w-3xl mt-6">
+  <iframe class="w-full rounded-lg shadow-lg border-2 border-[#d7b77e]" height="360"
+    src="https://www.youtube.com/embed/bkAvVC9qDPo" 
+    title="YouTube video player" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    allowfullscreen>
+  </iframe>
+</div>
+  </section>
+
+  <section id="History" class="text-center">
+    <h2 class="font-serif text-3xl md:text-4xl text-[#5a3825] mb-12 border-b-2 border-[#d7b77e] inline-block pb-2 text-center w-full">Historical Background</h2>
+    <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
+      <div class="history-card p-6 bg-white bg-opacity-80 rounded-lg shadow-lg border-l-4 border-[#d7b77e]">
+        <h3 class="text-xl font-semibold text-[#5a3825] mb-2">1744 - Construction</h3>
+        <p>The Jaro Belfry was built as a watchtower and bell tower, serving as a symbol of faith and protection against pirates.</p>
+      </div>
+      <div class="history-card p-6 bg-white bg-opacity-80 rounded-lg shadow-lg border-l-4 border-[#d7b77e]">
+        <h3 class="text-xl font-semibold text-[#5a3825] mb-2">1948 - Earthquake Damage</h3>
+        <p>The Belfry suffered significant damage but remained a strong symbol of resilience for the local community.</p>
+      </div>
+      <div class="history-card p-6 bg-white bg-opacity-80 rounded-lg shadow-lg border-l-4 border-[#d7b77e]">
+        <h3 class="text-xl font-semibold text-[#5a3825] mb-2">1990 - Restoration</h3>
+        <p>Restored carefully to preserve its original structure and design, ensuring its place as a historic landmark.</p>
+      </div>
+      <div class="history-card p-6 bg-white bg-opacity-80 rounded-lg shadow-lg border-l-4 border-[#d7b77e]">
+        <h3 class="text-xl font-semibold text-[#5a3825] mb-2">Today</h3>
+        <p>It stands proudly beside the cathedral, drawing tourists and locals who admire its history and beauty.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="text-center">
+    <h2>Gallery</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto mt-6">
+      <div class="gallery-item overflow-hidden rounded-lg border-2 border-[#d7b77e]">
+        <img src="belfry.jpg" alt="Belfry Front" class="w-full h-64 object-cover cursor-pointer">
+      </div>
+      <div class="gallery-item overflow-hidden rounded-lg border-2 border-[#d7b77e]">
+        <img src="kampanaryo.jpg" alt="Belfry Side" class="w-full h-64 object-cover cursor-pointer">
+      </div>
+	  <div class="gallery-item overflow-hidden rounded-lg border-2 border-[#d7b77e]">
+        <img src="us.jpg" alt="us" class="w-full h-64 object-cover cursor-pointer">
+      </div>
+    </div>
+  </section>
+
+  <section id="schedule" class="text-center">
+    <h2>Visiting Hours</h2>
+    <div class="overflow-x-auto mt-8 max-w-3xl mx-auto">
+      <table class="min-w-full table-auto bg-white rounded-lg overflow-hidden shadow-lg border-2 border-yellow-900 table-heritage">
+        <thead>
+          <tr>
+            <th class="px-6 py-3 text-left">Day</th>
+            <th class="px-6 py-3 text-left">Open Hours</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-300">
+          <tr class="even:bg-yellow-50">
+            <td class="px-6 py-4 font-medium">Monday - Friday</td>
+            <td class="px-6 py-4">8:00 AM - 6:00 PM</td>
+          </tr>
+          <tr>
+            <td class="px-6 py-4 font-medium">Saturday - Sunday</td>
+            <td class="px-6 py-4">8:00 AM - 7:00 PM</td>
+          </tr>
+          <tr class="even:bg-yellow-50">
+            <td class="px-6 py-4 font-medium">Public Holidays</td>
+            <td class="px-6 py-4">Open (Special Schedule)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="location" class="text-center">
+    <h2>Location</h2>
+    <div class="max-w-5xl mx-auto mt-8 rounded-lg overflow-hidden shadow-md">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.7195208395013!2d122.56218937479105!3d10.71459839237262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33aee57b7b3c0b29%3A0x334efbfcb1e9f59d!2sJaro%20Belfry!5e0!3m2!1sen!2sph!4v1714330000000!5m2!1sen!2sph"
+        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Jaro Heritage Tourism. All rights reserved.</p>
+    <p class="text-sm">Developed by: Rema Joy Amaro, Jasmine Arcenal, Katrina Dumayhag</p>
+  </footer>
+
+  <script>
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    document.querySelectorAll('#gallery img').forEach(img => {
+      img.addEventListener('click', () => {
+        const lightbox = document.createElement('div');
+        lightbox.className = 'lightbox';
+        lightbox.innerHTML = `<img src="${img.src}" class="max-h-[90%] max-w-[90%] rounded-lg border-4 border-[#d7b77e] shadow-2xl">`;
+        document.body.appendChild(lightbox);
+        lightbox.addEventListener('click', () => lightbox.remove());
+      });
+    });
+  </script>
+</body>
+</html>

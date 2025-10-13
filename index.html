@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Jaro Heritage Tourism - Explore the historic beauty of Jaro, Iloilo">
+  <meta name="keywords" content="Jaro, Heritage, Tourism, Cathedral, Belfry, Iloilo">
+  <title>JARO HERITAGE TOURISM</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #3E2723;
+      --accent: #C19A6B;
+      --gold: #FFD700;
+      --bg-light: #FFF8E7;
+      --bg-main: #F9F5EB;
+      --text-dark: #3E2723;
+      --btn-bg: #A0522D;
+      --btn-hover: #704214;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-main);
+      color: var(--text-dark);
+      line-height: 1.7;
+    }
+
+    header {
+      background: var(--primary);
+      color: #fff;
+      border-bottom: 4px solid var(--accent);
+      box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+    }
+
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 5%;
+      flex-wrap: wrap;
+    }
+
+    .logo { display: flex; align-items: center; gap: 12px; }
+    .logo img { height: 55px; border-radius: 10px; transition: transform 0.3s ease; }
+    .logo img:hover { transform: scale(1.1); }
+
+    .logo h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      letter-spacing: 0.5px;
+    }
+
+    nav ul { list-style: none; display: flex; gap: 25px; flex-wrap: wrap; }
+    nav a { text-decoration: none; color: #F5DEB3; font-weight: 600; transition: color 0.3s ease; }
+    nav a:hover { color: var(--gold); }
+
+    #header-banner {
+      background: url('jaro.jpg') center/cover no-repeat;
+      height: 800px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--gold);
+      font-family: 'Playfair Display', serif;
+      font-size: 34px;
+      padding: 0 10px;
+      letter-spacing: 1px;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+      width: 100%;
+      box-shadow: inset 0 0 60px rgba(0,0,0,0.4);
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    /* Tourist Spots */
+    #tourist {
+      background: var(--bg-light);
+      border-radius: 15px;
+      padding: 50px 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin-bottom: 60px;
+    }
+
+    #tourist h2 {
+      text-align: center;
+      color: var(--primary);
+      font-size: 32px;
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 35px;
+    }
+
+    .carousel-container { position: relative; overflow: hidden; border-radius: 15px; }
+    .carousel-slide { display: flex; transition: transform 0.6s ease-in-out; }
+
+    .tourist-item {
+      min-width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #FAF3E0;
+      border-radius: 15px;
+      overflow: hidden;
+      text-align: center;
+      padding-bottom: 25px;
+    }
+
+    .tourist-item img { width: 70%; max-height: 800px; object-fit: cover; }
+
+    .tourist-text { padding: 20px 40px; max-width: 90%; }
+    .tourist-text h3 { color: var(--primary); font-size: 26px; margin-bottom: 10px; font-family: 'Playfair Display', serif; }
+    .tourist-text p { margin-bottom: 15px; }
+
+    .tourist-text button {
+      background: var(--btn-bg);
+      color: #fff;
+      border: none;
+      padding: 10px 25px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s;
+    }
+
+    .tourist-text button:hover { background: var(--btn-hover); transform: scale(1.05); }
+
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(62, 39, 35, 0.8);
+      color: #fff;
+      border: none;
+      font-size: 2rem;
+      padding: 10px 18px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .prev:hover, .next:hover { background: var(--accent); }
+    .prev { left: 15px; }
+    .next { right: 15px; }
+
+    /* Map Section */
+    #location-contact {
+      background: var(--bg-light);
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 40px 30px;
+      margin-bottom: 60px;
+      text-align: center;
+    }
+
+    #location-contact h2 {
+      color: var(--primary);
+      font-size: 28px;
+      margin-bottom: 30px;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .map-container {
+      max-width: 900px;
+      margin: 0 auto;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .map-container iframe { width: 100%; height: 400px; border: 0; }
+
+    /* About Section */
+    #about {
+      background: var(--bg-light);
+      border-radius: 15px;
+      padding: 40px 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    #about h2 {
+      color: var(--primary);
+      font-size: 28px;
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 20px;
+    }
+
+    #about img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    #about p {
+      max-width: 850px;
+      margin: auto;
+      font-size: 1rem;
+      line-height: 1.8;
+      text-align: justify;
+    }
+
+    footer {
+      background: var(--primary);
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      border-top: 3px solid var(--accent);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 768px) {
+      .tourist-item img { max-height: 300px; }
+      .logo h1 { font-size: 20px; }
+      nav ul { gap: 15px; }
+      #header-banner { font-size: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-top">
+    <div class="logo">
+      <img src="images/logo.jpg" alt="Jaro Logo">
+      <h1>Jaro Heritage Tourism</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#tourist">Tourist Spots</a></li>
+        <li><a href="#location-contact">Location</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="guide.html">Tourism Guide</a></li>
+        <li><a href="org.html">Organization</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div id="header-banner">
+    Discover the Historic Beauty of Jaro
+  </div>
+</header>
+
+<main>
+
+  <section id="tourist">
+    <h2>Historic Landmarks of Jaro</h2>
+    <div class="carousel-container">
+      <div class="carousel-slide">
+        <div class="tourist-item">
+          <img src="cathedral.jpg" alt="Jaro Cathedral">
+          <div class="tourist-text">
+            <h3>Jaro Cathedral</h3>
+            <p>The Jaro Metropolitan Cathedral, also known as the National Shrine of Our Lady of the Candles, is one of Iloilo’s most revered religious landmarks.</p>
+            <a href="cathedral.html"><button>Learn More</button></a>
+          </div>
+        </div>
+        <div class="tourist-item">
+          <img src="belfry.jpg" alt="Jaro Belfry">
+          <div class="tourist-text">
+            <h3>Jaro Belfry</h3>
+            <p>Across the Cathedral stands the historic Jaro Belfry, an 18th-century bell tower that symbolizes Jaro’s resilience through centuries of history.</p>
+            <a href="belfry.html"><button>Learn More</button></a>
+          </div>
+        </div>
+      </div>
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Jaro</h2>
+    <img src="jaro plaza.jpg" alt="Jaro District">
+    <p>
+      Jaro is one of the oldest and most historically significant districts of Iloilo City. Known for its grand Spanish colonial houses, stunning churches, and rich cultural heritage, it was once a separate city before being incorporated into Iloilo.
+      <br><br>
+      The district is famous for the **Jaro Metropolitan Cathedral** and the **Jaro Belfry**, both standing as powerful symbols of faith and resilience. During the Spanish colonial era, Jaro was considered a center of religion, education, and commerce in the Visayas.
+      <br><br>
+      Every February 2, Jaro comes alive during the **Jaro Fiesta**, honoring Nuestra Señora de la Candelaria (Our Lady of the Candles), the patroness of Western Visayas. The image of the Virgin Mary is the only one in the Philippines canonically crowned by a pope while still in the country.
+      <br><br>
+      Today, Jaro remains a blend of history and modernity — a place where heritage is preserved while embracing progress.
+    </p>
+  </section>
+  
+  <section id="location-contact">
+    <h2>📍 Location</h2>
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.949727418781!2d122.55599147475564!3d10.713309292370835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33aee4ce38d309ff%3A0xd3ed6b8c848f456a!2sJaro%20Cathedral!5e0!3m2!1sen!2sph!4v1696869919051!5m2!1sen!2sph" loading="lazy" allowfullscreen></iframe>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 Jaro Heritage Tourism. All rights reserved.</p>
+  <p>Developed by: Rema Joy Amaro • Jasmine Arcenal • Katrina Dumayhag</p>
+</footer>
+
+<script>
+  const slide = document.querySelector('.carousel-slide');
+  const slides = document.querySelectorAll('.tourist-item');
+  const prev = document.querySelector('.prev');
+  const next = document.querySelector('.next');
+  let counter = 0;
+
+  function updateSlide() {
+    slide.style.transform = `translateX(-${counter * 100}%)`;
+  }
+
+  next.addEventListener('click', () => {
+    counter = (counter + 1) % slides.length;
+    updateSlide();
+  });
+
+  prev.addEventListener('click', () => {
+    counter = (counter - 1 + slides.length) % slides.length;
+    updateSlide();
+  });
+
+  setInterval(() => {
+    counter = (counter + 1) % slides.length;
+    updateSlide();
+  }, 5000);
+</script>
+
+</body>
+</html>
