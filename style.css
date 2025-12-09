@@ -1,0 +1,444 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Merriweather:wght@700&display=swap');
+
+
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+h1, h2 {
+    text-align: center;
+    font-family: "Merriweather", serif;
+}
+
+header {
+    background-color: #573540;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    font-family: "Merriweather", serif;
+}
+
+header nav a {
+    color: white;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: auto;
+}
+
+
+.hero {
+    background-color: #7e5865;
+    background-image: url('gender3.png');
+    background-repeat: no-repeat;
+    background-position: center center; 
+    background-size: cover; 
+    width: 100vw; 
+    max-width: 100%; 
+    height: 60vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(100, 80, 80);
+    font-size: 2.3rem;
+    font-weight: 700;
+    font-family: "Merriweather", serif;
+    text-align: center;
+    text-shadow: 2px 2px 5px #950680;
+    margin: 0; 
+    padding: 0;
+}
+
+
+.next-button-container {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+
+.next-button {
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    background-color: #846ae2f6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    transition: 0.3s;
+}
+
+.next-button:hover {
+    background-color: #f16d9d;
+    transform: translateY(-2px);
+}
+
+
+.welcome-section {
+    background: linear-gradient(135deg, #ff7aa1, #ffb3c6);
+    color: white;
+    padding: 40px;
+    border-radius: 12px;
+    width: 85%;
+    margin: 40px auto;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(255, 0, 102, 0.3);
+    font-family: "Poppins", sans-serif;
+}
+
+.welcome-section h2 {
+    font-size: 2.3rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-family: "Merriweather", serif;
+}
+
+.welcome-section p {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.welcome-section h3 {
+    font-size: 1.9rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-family: "Merriweather", serif;
+}
+
+.info-list {
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto 25px auto;
+}
+
+.info-list li {
+    margin-bottom: 10px;
+    font-size: 1.15rem;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.25);
+    padding: 10px 15px;
+    border-radius: 8px;
+    backdrop-filter: blur(3px);
+}
+
+/* === TIMELINE === */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 2rem auto;
+    font-family: "Poppins", sans-serif;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: #e91e63;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+}
+
+.timeline-event {
+    padding: 1rem 2rem;
+    position: relative;
+    width: 50%;
+    border-radius: 10px;
+    color: white;
+    box-sizing: border-box;
+    font-size: 1.1rem;
+}
+
+.timeline-event h3 {
+    font-family: "Merriweather", serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.timeline-event.left {
+    left: 0;
+    background-color: #2196F3;
+}
+
+.timeline-event.left::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #e91e63;
+    top: 15px;
+    border-radius: 50%;
+    right: -10px;
+    z-index: 1;
+}
+
+.timeline-event.right {
+    left: 50%;
+    background-color: #e91e63;
+}
+
+.timeline-event.right::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #2196F3;
+    top: 15px;
+    left: -10px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-header {
+    background-color: #ff9800;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    font-family: "Merriweather", serif;
+    display: table;
+    margin: 0 auto 2rem auto;
+}
+
+
+.insights-box {
+    background-color: #e194af;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-top: 1.5rem;
+}
+
+.insights-header {
+    background-color: #f92fe8;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1.7rem;
+    font-weight: bold;
+    font-family: "Merriweather", serif;
+    text-align: center;
+    display: table;
+    margin: 0 auto 1.5rem auto;
+}
+
+
+.about-box {
+    background-color: #f7cfe1;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.about-header {
+    background-color: #e91e63;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1.9rem;
+    font-weight: bold;
+    font-family: "Merriweather", serif;
+    text-align: center;
+    display: table;
+    margin: 0 auto 1.5rem auto;
+}
+
+.about-box h3 {
+    margin-top: 1.5rem;
+    color: #8a0030;
+    font-size: 1.35rem;
+    font-family: "Merriweather", serif;
+}
+
+.about-box p,
+.about-box ul li {
+    font-size: 1.15rem;
+    line-height: 1.7;
+}
+
+.about-box ul {
+    background: #ffe4ef;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+
+.gallery-header {
+    background-color: #ff5fa2;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1.7rem;
+    font-weight: bold;
+    font-family: "Merriweather", serif;
+    display: table;
+    margin: 0 auto 2rem auto;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+
+.timeline-scroll {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding: 1rem 0;
+    scroll-behavior: smooth;
+}
+
+.timeline-card {
+    min-width: 250px;
+    background-color: #e91e63;
+    color: white;
+    padding: 1rem;
+    border-radius: 12px;
+    flex-shrink: 0;
+    transition: transform 0.3s;
+}
+
+.timeline-card:hover {
+    transform: scale(1.05);
+}
+
+
+.slides-container {
+    position: relative;
+    max-width: 800px;
+    margin: 2rem auto;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    border-radius: 12px;
+}
+
+.slide.active {
+    display: block;
+}
+
+.prev-slide, .next-slide {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.4);
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.prev-slide { left: 10px; }
+.next-slide { right: 10px; }
+
+
+.how-to-help {
+    background: linear-gradient(135deg, #ff7aa1, #ffb3c6);
+    padding: 2rem;
+    border-radius: 12px;
+    color: white;
+    margin: 2rem auto;
+    max-width: 900px;
+}
+
+.how-to-help ul li {
+    margin-bottom: 12px;
+    font-size: 1.15rem;
+}
+
+
+.gallery-section {
+    margin-top: 3rem;
+}
+
+.gallery-header {
+    background-color: #ff4f8b;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: "Merriweather", serif;
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto 2rem auto;
+    box-shadow: 0 4px 10px rgba(255, 0, 120, 0.4);
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1.5rem;
+    padding: 0 1rem;
+}
+
+.gallery img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    opacity: 0;
+    animation: fadeIn 0.8s forwards ease-out;
+}
+
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
