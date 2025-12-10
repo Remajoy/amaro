@@ -287,6 +287,57 @@ section {
     border-radius: 8px;
     margin-top: 1rem;
 }
+.women-inspire p {
+    font-size: 1em;
+    color: #555;
+    margin: 10px 0 20px 0; /* space above and below */
+    text-align: center; /* ensures the text is centered */
+}
+
+.team-section {
+    margin-top: 40px;
+    padding: 20px;
+    text-align: center;
+}
+
+.team-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #ccc;
+    transition: transform 0.3s;
+}
+
+.team-member img:hover {
+    transform: scale(1.1);
+}
+
+.team-member p {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #555;
+}
+
 
 
 .gallery-header {
